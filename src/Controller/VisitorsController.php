@@ -1,7 +1,12 @@
 <?php
 declare(strict_types=1);
 
+
+
 namespace App\Controller;
+
+use Picqer\Barcode\BarcodeGeneratorJPG;
+use Picqer\Barcode\BarcodeGeneratorHTML;
 
 /**
  * Visitors Controller
@@ -101,5 +106,49 @@ class VisitorsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function regist($type="")
+    {
+        $QUESTION_COUNT=6;
+        $visitor = $this->Visitors->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $visitor = $this->Visitors->patchEntity($visitor, $this->request->getData());
+            $is_all_agreed=true;
+            for ($i=1; $i <=$QUESTION_COUNT ; $i++) {
+                if ($visitor['q'.$i]==="0") {
+                    $is_all_agreed=false;
+                }
+            }
+            if (!$is_all_agreed) {
+                return $this->redirect(['action' => 'failed']);
+            }
+            //ユニークIDを生成
+            $visitor['id']=hash('fnv132', ''.time()).date("d");
+            if ($this->Visitors->save($visitor)) {
+                // $this->Flash->success(__('The visitor has been saved.'));
+                return $this->redirect(['action' => 'success',$visitor['id']]);
+            }
+            $this->Flash->error(__('登録内容が不正です'));
+        }
+        $this->set(compact('visitor', 'type'));
+    }
+
+    public function select()
+    {
+    }
+
+    public function success($id = null)
+    {
+        // require 'vendor/autoload.php';
+        $color = [0, 0, 0];
+        // $generator = new BarcodeGeneratorJPG();
+        // file_put_contents('/web/'.$id.'.jpg', $generator->getBarcode($id, $generator::TYPE_CODE_128, 3, 60, $color));
+        $generator = new BarcodeGeneratorHTML();
+        $this->set(['barcode'=>$generator->getBarcode($id, $generator::TYPE_CODE_128, 2, 50, 'black')]);
+    }
+
+    public function failed()
+    {
     }
 }

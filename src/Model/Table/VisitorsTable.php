@@ -64,14 +64,12 @@ class VisitorsTable extends Table
         $validator
             ->scalar('affiliation')
             ->maxLength('affiliation', 255)
-            ->requirePresence('affiliation', 'create')
-            ->notEmptyString('affiliation');
+            ->allowEmptyString('affiliation');
 
         $validator
             ->scalar('student_number')
             ->maxLength('student_number', 63)
-            ->requirePresence('student_number', 'create')
-            ->notEmptyString('student_number');
+            ->allowEmptyString('student_number');
 
         return $validator;
     }

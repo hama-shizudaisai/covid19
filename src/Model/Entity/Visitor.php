@@ -28,5 +28,12 @@ class Visitor extends Entity
         'name' => true,
         'affiliation' => true,
         'student_number' => true,
+        'q1'=>true,
+        'q2'=>true,
+        'q3'=>true,
+        'q4'=>true,
+        'q5'=>true,
+        'q6'=>true,
+
     ];
 }
