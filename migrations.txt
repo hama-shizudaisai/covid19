@@ -1,0 +1,1 @@
+bin\cake bake migration CreateVisitors id:string[127]:primary name:string[255] affiliation:string[255] student_number:string[63]
