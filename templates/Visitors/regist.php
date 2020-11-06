@@ -36,14 +36,14 @@
                     <?= $this->Form->create($visitor); ?>
                     <input type="hidden" name="csrf_test_name" value="7c9845e98576bfd512c4f4a4ba7d5773">
                     <div class="form-group">
-                        <?= $this->Form->control('name', ['label' => '氏名 Name', 'class' => 'form-control', 'placeholder' => "Your Name"]) ?>
+                        <?= $this->Form->control('name', ['label' => '氏名 Name', 'class' => 'form-control', 'placeholder' => "静大太郎"]) ?>
                         <small id="v_namehelp" class="form-text text-muted">Japanese or English available.</small>
                     </div>
                     <div class="form-group">
                         <?php if ($type === "student") : ?>
-                            <?= $this->Form->control('student_number', ['label' => '学籍番号 Student ID Number', 'class' => 'form-control', 'placeholder' => "Student ID", 'required' => true]) ?>
+                            <?= $this->Form->control('student_number', ['label' => '学籍番号 Student ID Number', 'class' => 'form-control', 'placeholder' => "50919999", 'required' => true]) ?>
                         <?php elseif ($type === "teacher") : ?>
-                            <?= $this->Form->control('affiliation', ['label' => '所属部局 Affiliation', 'class' => 'form-control', 'placeholder' => "Affiliation", 'required' => true]) ?>
+                            <?= $this->Form->control('affiliation', ['label' => '所属部局 Affiliation', 'class' => 'form-control', 'placeholder' => "浜松総務課", 'required' => true]) ?>
                         <?php endif; ?>
                     </div>
 
