@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-3 mb-5">
         <div class="col-md-12">
             <?= $this->Html->link('私は 静大生 です。I am a STUDENT of Shizuoka Univ.', ['action' => 'regist', 'student'], ['class' => 'btn btn-success btn-block mt-3']) ?>
             <?= $this->Html->link('私は 静大の教職員 です。I am a WORKER of Shizuoka Univ.', ['action' => 'regist', 'teacher'], ['class' => 'btn btn-success btn-block mt-3']) ?>
