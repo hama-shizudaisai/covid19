@@ -145,7 +145,7 @@ class VisitorsController extends AppController
         // $generator = new BarcodeGeneratorJPG();
         // file_put_contents('/web/'.$id.'.jpg', $generator->getBarcode($id, $generator::TYPE_CODE_128, 3, 60, $color));
         $generator = new BarcodeGeneratorHTML();
-        $this->set(['barcode'=>$generator->getBarcode($id, $generator::TYPE_CODE_128, 2, 50, 'black')]);
+        $this->set(['id'=>$id,'barcode'=>$generator->getBarcode($id, $generator::TYPE_CODE_128, 2, 50, 'black')]);
     }
 
     public function failed()
