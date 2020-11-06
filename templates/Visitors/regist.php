@@ -93,13 +93,12 @@
                         has immigration restrictions or post-entry health observation periods required from the
                         Government of Japan.</label> -->
                 </div>
-                <?= $this->Form->button(__('送信する'), ['class'=>"btn btn-success btn-block mt-3 mb-3"]) ?>
+                <?= $this->Form->button(__('送信する Submit'), ['class'=>"btn btn-success btn-block mt-3 mb-3"]) ?>
 
                 <?= $this->Form->end(); ?>
                 <div class="row mb-5">
                     <div class="col-md-12">
-                        <button type="button" onclick="location.href=''"
-                            class="btn btn-primary btn-block">前のページに戻る<br>Back to previous Page</button>
+                     <?= $this->Html->link("前のページに戻る Back to previous Page",['action'=>'select'],["class"=>"btn btn-primary btn-block"]);?>
                     </div>
                 </div>
 
@@ -131,8 +130,8 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-12">
-                <button type="button" onclick="javascript:window.close();"
-                    class="btn btn-success btn-block mt-3">このページを閉じる<br>Close this page.</button>
+                <!-- <button type="button" onclick="(()=>{window.close()})()"
+                    class="btn btn-success btn-block mt-3">このページを閉じる<br>Close this page.</button> -->
                 <button type="button" onclick="location.href='../select'"
                     class="btn btn-primary btn-block mt-3">はじめのページににもどる<br>Back to Top page.</button>
             </div>
