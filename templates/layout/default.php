@@ -46,6 +46,11 @@ $cakeDescription = 'Admission Questionnaire';
                 <?= $this->Html->image('cake.logo.svg', ['width' => "20%"]); ?>
             </nav>
         </div>
+        <div class="d-block d-lg-none">
+            <nav class="navbar navbar-light bg-light">
+                <?= $this->Html->image('cake.logo.svg', ['width' => "30%"]); ?>
+            </nav>
+        </div>
     </nav>
     <main class="main">
         <div class="container">
