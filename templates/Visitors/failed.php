@@ -22,10 +22,9 @@
     </div>
     <div class="row mt-5">
         <div class="col-md-12">
-            <button type="button" onclick="javascript:window.close();"
-                class="btn btn-success btn-block mt-3">このページを閉じる<br>Close this page.</button>
-            <button type="button" onclick="location.href='http://localhost/covid19/'"
-                class="btn btn-primary btn-block mt-3">はじめのページににもどる<br>Back to Top page.</button>
+            <!-- <button type="button" onclick="javascript:window.close();"
+                class="btn btn-success btn-block mt-3">このページを閉じる<br>Close this page.</button> -->
+            <button type="button" onclick="location.href='http://localhost/covid19/'" class="btn btn-primary btn-block mt-3">はじめのページににもどる<br>Back to Top page.</button>
         </div>
     </div>
 </div>

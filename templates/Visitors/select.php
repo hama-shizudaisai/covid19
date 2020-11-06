@@ -1,10 +1,21 @@
-<div class="container-fluid justify-content-center">
-    <div class="row">
-        <p class="text-center col-12">当てはまる選択肢を選んで下さい</p>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="card">
+                <h5 class="card-header">1.来場者タイプ ／ Visitor type</h5>
+                <div class="card-body">
+                    <p class="card-text">あなたにあてはまるものを選択してください。</p>
+                    <p>What are you?</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-        <?= $this->Html->link('静大生', ['action'=>'regist','student'], ['class'=>'btn btn-primary btn-lg col-4'])?>
-        <?= $this->Html->link('教職員', ['action'=>'regist','teacher'], ['class'=>'btn btn-primary btn-lg col-4'])?>
-        <?= $this->Html->link('その他', ['action'=>'regist','others'], ['class'=>'btn btn-primary btn-lg col-4'])?>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <?= $this->Html->link('私は 静大生 です。I am a STUDENT of Shizuoka Univ.', ['action' => 'regist', 'student'], ['class' => 'btn btn-success btn-block mt-3']) ?>
+            <?= $this->Html->link('私は 静大の教職員 です。I am a WORKER of Shizuoka Univ.', ['action' => 'regist', 'teacher'], ['class' => 'btn btn-success btn-block mt-3']) ?>
+            <?= $this->Html->link('私は 上記以外 です。I do not classified into any selections
+                above.', ['action' => 'regist', 'others'], ['class' => 'btn btn-success btn-block mt-3']) ?>
+        </div>
     </div>
 </div>
