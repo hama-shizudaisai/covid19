@@ -1,13 +1,3 @@
-<div class="d-none d-lg-block">
-    <nav class="navbar navbar-light bg-light">
-        <img src="http://localhost/covid19/common_img/top_logotype.svg" width="20%" alt="">
-    </nav>
-</div>
-<div class="d-block d-lg-none">
-    <nav class="navbar navbar-light bg-light">
-        <img src="http://localhost/covid19/common_img/top_logotype.svg" width="30%" alt="">
-    </nav>
-</div>
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-12">
@@ -24,7 +14,8 @@
         <div class="col-md-12">
             <!-- <button type="button" onclick="javascript:window.close();"
                 class="btn btn-success btn-block mt-3">このページを閉じる<br>Close this page.</button> -->
-            <button type="button" onclick="location.href='http://localhost/covid19/'" class="btn btn-primary btn-block mt-3">はじめのページににもどる<br>Back to Top page.</button>
+            <? $this->Html->link("はじめのページににもどる<br>Back to Top page.",['action'=>"select"],['class'=>'btn btn-primary btn-block mt-3'])?>
+            <!-- <button type="button" onclick="location.href='http://localhost/covid19/'" class="btn btn-primary btn-block mt-3"></button> -->
         </div>
     </div>
 </div>
