@@ -14,7 +14,7 @@
         <div class="col-md-12">
             <!-- <button type="button" onclick="javascript:window.close();"
                 class="btn btn-success btn-block mt-3">このページを閉じる<br>Close this page.</button> -->
-            <? $this->Html->link("はじめのページににもどる<br>Back to Top page.",['action'=>"select"],['class'=>'btn btn-primary btn-block mt-3'])?>
+            <?= $this->Html->link("はじめのページににもどる<br>Back to Top page.", ['action' => "select"], ['class' => 'btn btn-primary btn-block mt-3']) ?>
             <!-- <button type="button" onclick="location.href='http://localhost/covid19/'" class="btn btn-primary btn-block mt-3"></button> -->
         </div>
     </div>
