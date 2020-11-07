@@ -52,6 +52,7 @@ class VisitorsController extends AppController
      */
     public function add()
     {
+        return $this->select();
         $visitor = $this->Visitors->newEmptyEntity();
         if ($this->request->is('post')) {
             $visitor = $this->Visitors->patchEntity($visitor, $this->request->getData());
