@@ -23,6 +23,7 @@ class VisitorsController extends AppController
      */
     public function index()
     {
+        return $this->select();
         $visitors = $this->paginate($this->Visitors);
 
         $this->set(compact('visitors'));
